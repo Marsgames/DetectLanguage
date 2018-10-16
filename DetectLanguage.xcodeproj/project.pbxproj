@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AE1ED3182175EB4000985648 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE1ED3172175EB4000985648 /* main.cpp */; };
+		AE1ED3872175EFEA00985648 /* libfann.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1ED3632175EE8E00985648 /* libfann.a */; };
+		AE1ED38A2175F33500985648 /* CalculateFrequency.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE1ED3882175F33500985648 /* CalculateFrequency.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,58 @@
 /* Begin PBXFileReference section */
 		AE1ED3142175EB4000985648 /* DetectLanguage */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DetectLanguage; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE1ED3172175EB4000985648 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		AE1ED31F2175EB6B00985648 /* FANN-2.2.0-Source */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "FANN-2.2.0-Source"; path = "../../../../../Downloads/FANN-2.2.0-Source"; sourceTree = "<group>"; };
+		AE1ED3232175EC7500985648 /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; name = include; path = "../../../../../Downloads/FANN-2.2.0-Source/src/include"; sourceTree = "<group>"; };
+		AE1ED3252175EE1800985648 /* fann.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = fann.h; path = ../../../../../Downloads/fann/src/include/fann.h; sourceTree = "<group>"; };
+		AE1ED3272175EE2F00985648 /* fann.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = fann.c; path = ../../../../../Downloads/fann/src/fann.c; sourceTree = "<group>"; };
+		AE1ED3292175EE7A00985648 /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = config.h; path = ../../../../../Downloads/fann/src/include/config.h; sourceTree = "<group>"; };
+		AE1ED32A2175EE7A00985648 /* fann_error.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = fann_error.h; path = ../../../../../Downloads/fann/src/include/fann_error.h; sourceTree = "<group>"; };
+		AE1ED32B2175EE7A00985648 /* fann_cascade.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = fann_cascade.h; path = ../../../../../Downloads/fann/src/include/fann_cascade.h; sourceTree = "<group>"; };
+		AE1ED32C2175EE7A00985648 /* fann_train.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = fann_train.h; path = ../../../../../Downloads/fann/src/include/fann_train.h; sourceTree = "<group>"; };
+		AE1ED32D2175EE7A00985648 /* parallel_fann.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = parallel_fann.h; path = ../../../../../Downloads/fann/src/include/parallel_fann.h; sourceTree = "<group>"; };
+		AE1ED32E2175EE7A00985648 /* fann_data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = fann_data.h; path = ../../../../../Downloads/fann/src/include/fann_data.h; sourceTree = "<group>"; };
+		AE1ED32F2175EE7A00985648 /* fann_activation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = fann_activation.h; path = ../../../../../Downloads/fann/src/include/fann_activation.h; sourceTree = "<group>"; };
+		AE1ED3302175EE7A00985648 /* parallel_fann.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = parallel_fann.hpp; path = ../../../../../Downloads/fann/src/include/parallel_fann.hpp; sourceTree = "<group>"; };
+		AE1ED3312175EE7A00985648 /* fann_io.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = fann_io.h; path = ../../../../../Downloads/fann/src/include/fann_io.h; sourceTree = "<group>"; };
+		AE1ED3322175EE7A00985648 /* doublefann.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = doublefann.h; path = ../../../../../Downloads/fann/src/include/doublefann.h; sourceTree = "<group>"; };
+		AE1ED3332175EE7A00985648 /* fann_training_data_cpp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = fann_training_data_cpp.h; path = ../../../../../Downloads/fann/src/include/fann_training_data_cpp.h; sourceTree = "<group>"; };
+		AE1ED3342175EE7A00985648 /* fixedfann.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = fixedfann.h; path = ../../../../../Downloads/fann/src/include/fixedfann.h; sourceTree = "<group>"; };
+		AE1ED3352175EE7A00985648 /* fann_cpp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = fann_cpp.h; path = ../../../../../Downloads/fann/src/include/fann_cpp.h; sourceTree = "<group>"; };
+		AE1ED3362175EE7A00985648 /* fann_internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = fann_internal.h; path = ../../../../../Downloads/fann/src/include/fann_internal.h; sourceTree = "<group>"; };
+		AE1ED3372175EE7A00985648 /* fann_data_cpp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = fann_data_cpp.h; path = ../../../../../Downloads/fann/src/include/fann_data_cpp.h; sourceTree = "<group>"; };
+		AE1ED3382175EE7A00985648 /* floatfann.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = floatfann.h; path = ../../../../../Downloads/fann/src/include/floatfann.h; sourceTree = "<group>"; };
+		AE1ED3492175EE8B00985648 /* libfixedfann.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfixedfann.2.2.0.dylib; path = ../../../../../Downloads/fann/src/libfixedfann.2.2.0.dylib; sourceTree = "<group>"; };
+		AE1ED34A2175EE8B00985648 /* fixedfann.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = fixedfann.c; path = ../../../../../Downloads/fann/src/fixedfann.c; sourceTree = "<group>"; };
+		AE1ED34B2175EE8B00985648 /* fann_train_data.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = fann_train_data.c; path = ../../../../../Downloads/fann/src/fann_train_data.c; sourceTree = "<group>"; };
+		AE1ED34C2175EE8B00985648 /* libdoublefann.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libdoublefann.a; path = ../../../../../Downloads/fann/src/libdoublefann.a; sourceTree = "<group>"; };
+		AE1ED34D2175EE8B00985648 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; name = Makefile; path = ../../../../../Downloads/fann/src/Makefile; sourceTree = "<group>"; };
+		AE1ED34E2175EE8B00985648 /* parallel_fann_cpp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = parallel_fann_cpp.cpp; path = ../../../../../Downloads/fann/src/parallel_fann_cpp.cpp; sourceTree = "<group>"; };
+		AE1ED34F2175EE8B00985648 /* parallel_doublefann_cpp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = parallel_doublefann_cpp.cpp; path = ../../../../../Downloads/fann/src/parallel_doublefann_cpp.cpp; sourceTree = "<group>"; };
+		AE1ED3502175EE8B00985648 /* libfloatfann.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfloatfann.2.2.0.dylib; path = ../../../../../Downloads/fann/src/libfloatfann.2.2.0.dylib; sourceTree = "<group>"; };
+		AE1ED3512175EE8C00985648 /* fann_io.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = fann_io.c; path = ../../../../../Downloads/fann/src/fann_io.c; sourceTree = "<group>"; };
+		AE1ED3522175EE8C00985648 /* libdoublefann.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libdoublefann.dylib; path = ../../../../../Downloads/fann/src/libdoublefann.dylib; sourceTree = "<group>"; };
+		AE1ED3532175EE8C00985648 /* doublefann.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = doublefann.c; path = ../../../../../Downloads/fann/src/doublefann.c; sourceTree = "<group>"; };
+		AE1ED3542175EE8C00985648 /* libfloatfann.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfloatfann.2.dylib; path = ../../../../../Downloads/fann/src/libfloatfann.2.dylib; sourceTree = "<group>"; };
+		AE1ED3552175EE8C00985648 /* fann_error.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = fann_error.c; path = ../../../../../Downloads/fann/src/fann_error.c; sourceTree = "<group>"; };
+		AE1ED3562175EE8C00985648 /* libfloatfann.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfloatfann.a; path = ../../../../../Downloads/fann/src/libfloatfann.a; sourceTree = "<group>"; };
+		AE1ED3572175EE8D00985648 /* parallel_floatfann_cpp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = parallel_floatfann_cpp.cpp; path = ../../../../../Downloads/fann/src/parallel_floatfann_cpp.cpp; sourceTree = "<group>"; };
+		AE1ED3582175EE8D00985648 /* libdoublefann.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libdoublefann.2.dylib; path = ../../../../../Downloads/fann/src/libdoublefann.2.dylib; sourceTree = "<group>"; };
+		AE1ED3592175EE8D00985648 /* libfann.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfann.2.dylib; path = ../../../../../Downloads/fann/src/libfann.2.dylib; sourceTree = "<group>"; };
+		AE1ED35A2175EE8D00985648 /* libfixedfann.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfixedfann.dylib; path = ../../../../../Downloads/fann/src/libfixedfann.dylib; sourceTree = "<group>"; };
+		AE1ED35B2175EE8D00985648 /* floatfann.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = floatfann.c; path = ../../../../../Downloads/fann/src/floatfann.c; sourceTree = "<group>"; };
+		AE1ED35C2175EE8D00985648 /* parallel_fann.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = parallel_fann.c; path = ../../../../../Downloads/fann/src/parallel_fann.c; sourceTree = "<group>"; };
+		AE1ED35D2175EE8D00985648 /* libfloatfann.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfloatfann.dylib; path = ../../../../../Downloads/fann/src/libfloatfann.dylib; sourceTree = "<group>"; };
+		AE1ED35E2175EE8D00985648 /* libfann.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfann.2.2.0.dylib; path = ../../../../../Downloads/fann/src/libfann.2.2.0.dylib; sourceTree = "<group>"; };
+		AE1ED35F2175EE8D00985648 /* fann_train.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = fann_train.c; path = ../../../../../Downloads/fann/src/fann_train.c; sourceTree = "<group>"; };
+		AE1ED3602175EE8D00985648 /* libfann.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfann.dylib; path = ../../../../../Downloads/fann/src/libfann.dylib; sourceTree = "<group>"; };
+		AE1ED3612175EE8D00985648 /* fann_cascade.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = fann_cascade.c; path = ../../../../../Downloads/fann/src/fann_cascade.c; sourceTree = "<group>"; };
+		AE1ED3622175EE8D00985648 /* libdoublefann.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libdoublefann.2.2.0.dylib; path = ../../../../../Downloads/fann/src/libdoublefann.2.2.0.dylib; sourceTree = "<group>"; };
+		AE1ED3632175EE8E00985648 /* libfann.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfann.a; path = ../../../../../Downloads/fann/src/libfann.a; sourceTree = "<group>"; };
+		AE1ED3642175EE8E00985648 /* libfixedfann.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfixedfann.a; path = ../../../../../Downloads/fann/src/libfixedfann.a; sourceTree = "<group>"; };
+		AE1ED3652175EE8E00985648 /* libfixedfann.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfixedfann.2.dylib; path = ../../../../../Downloads/fann/src/libfixedfann.2.dylib; sourceTree = "<group>"; };
+		AE1ED3882175F33500985648 /* CalculateFrequency.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CalculateFrequency.cpp; sourceTree = "<group>"; };
+		AE1ED3892175F33500985648 /* CalculateFrequency.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CalculateFrequency.hpp; sourceTree = "<group>"; };
+		AE1ED38B2175F59900985648 /* main.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = main.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE1ED3872175EFEA00985648 /* libfann.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +98,7 @@
 			children = (
 				AE1ED3162175EB4000985648 /* DetectLanguage */,
 				AE1ED3152175EB4000985648 /* Products */,
+				AE1ED31E2175EB6A00985648 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +114,67 @@
 			isa = PBXGroup;
 			children = (
 				AE1ED3172175EB4000985648 /* main.cpp */,
+				AE1ED38B2175F59900985648 /* main.hpp */,
+				AE1ED3882175F33500985648 /* CalculateFrequency.cpp */,
+				AE1ED3892175F33500985648 /* CalculateFrequency.hpp */,
 			);
 			path = DetectLanguage;
+			sourceTree = "<group>";
+		};
+		AE1ED31E2175EB6A00985648 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE1ED3532175EE8C00985648 /* doublefann.c */,
+				AE1ED3612175EE8D00985648 /* fann_cascade.c */,
+				AE1ED3552175EE8C00985648 /* fann_error.c */,
+				AE1ED3512175EE8C00985648 /* fann_io.c */,
+				AE1ED34B2175EE8B00985648 /* fann_train_data.c */,
+				AE1ED35F2175EE8D00985648 /* fann_train.c */,
+				AE1ED34A2175EE8B00985648 /* fixedfann.c */,
+				AE1ED35B2175EE8D00985648 /* floatfann.c */,
+				AE1ED3622175EE8D00985648 /* libdoublefann.2.2.0.dylib */,
+				AE1ED3582175EE8D00985648 /* libdoublefann.2.dylib */,
+				AE1ED34C2175EE8B00985648 /* libdoublefann.a */,
+				AE1ED3522175EE8C00985648 /* libdoublefann.dylib */,
+				AE1ED35E2175EE8D00985648 /* libfann.2.2.0.dylib */,
+				AE1ED3592175EE8D00985648 /* libfann.2.dylib */,
+				AE1ED3632175EE8E00985648 /* libfann.a */,
+				AE1ED3602175EE8D00985648 /* libfann.dylib */,
+				AE1ED3492175EE8B00985648 /* libfixedfann.2.2.0.dylib */,
+				AE1ED3652175EE8E00985648 /* libfixedfann.2.dylib */,
+				AE1ED3642175EE8E00985648 /* libfixedfann.a */,
+				AE1ED35A2175EE8D00985648 /* libfixedfann.dylib */,
+				AE1ED3502175EE8B00985648 /* libfloatfann.2.2.0.dylib */,
+				AE1ED3542175EE8C00985648 /* libfloatfann.2.dylib */,
+				AE1ED3562175EE8C00985648 /* libfloatfann.a */,
+				AE1ED35D2175EE8D00985648 /* libfloatfann.dylib */,
+				AE1ED34D2175EE8B00985648 /* Makefile */,
+				AE1ED34F2175EE8B00985648 /* parallel_doublefann_cpp.cpp */,
+				AE1ED34E2175EE8B00985648 /* parallel_fann_cpp.cpp */,
+				AE1ED35C2175EE8D00985648 /* parallel_fann.c */,
+				AE1ED3572175EE8D00985648 /* parallel_floatfann_cpp.cpp */,
+				AE1ED3292175EE7A00985648 /* config.h */,
+				AE1ED3322175EE7A00985648 /* doublefann.h */,
+				AE1ED32F2175EE7A00985648 /* fann_activation.h */,
+				AE1ED32B2175EE7A00985648 /* fann_cascade.h */,
+				AE1ED3352175EE7A00985648 /* fann_cpp.h */,
+				AE1ED3372175EE7A00985648 /* fann_data_cpp.h */,
+				AE1ED32E2175EE7A00985648 /* fann_data.h */,
+				AE1ED32A2175EE7A00985648 /* fann_error.h */,
+				AE1ED3362175EE7A00985648 /* fann_internal.h */,
+				AE1ED3312175EE7A00985648 /* fann_io.h */,
+				AE1ED32C2175EE7A00985648 /* fann_train.h */,
+				AE1ED3332175EE7A00985648 /* fann_training_data_cpp.h */,
+				AE1ED3342175EE7A00985648 /* fixedfann.h */,
+				AE1ED3382175EE7A00985648 /* floatfann.h */,
+				AE1ED32D2175EE7A00985648 /* parallel_fann.h */,
+				AE1ED3302175EE7A00985648 /* parallel_fann.hpp */,
+				AE1ED3272175EE2F00985648 /* fann.c */,
+				AE1ED3252175EE1800985648 /* fann.h */,
+				AE1ED3232175EC7500985648 /* include */,
+				AE1ED31F2175EB6B00985648 /* FANN-2.2.0-Source */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE1ED3182175EB4000985648 /* main.cpp in Sources */,
+				AE1ED38A2175F33500985648 /* CalculateFrequency.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +357,8 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7RA755DD97;
+				HEADER_SEARCH_PATHS = /Users/Raph/Downloads/fann/src/include;
+				LIBRARY_SEARCH_PATHS = /Users/Raph/Downloads/fann/src;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -250,6 +368,8 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7RA755DD97;
+				HEADER_SEARCH_PATHS = /Users/Raph/Downloads/fann/src/include;
+				LIBRARY_SEARCH_PATHS = /Users/Raph/Downloads/fann/src;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
