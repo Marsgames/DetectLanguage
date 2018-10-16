@@ -14,6 +14,7 @@
 
 using namespace std;
 
-void CalculateFrequenc(const string& path, float* frequencesLettres);
+void CalculateFrequenc(ifstream& text, float* frequencesLettres);
 void TrainAnn();
 void DetectText();
+ifstream GetTextFilePath();

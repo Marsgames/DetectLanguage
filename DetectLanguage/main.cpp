@@ -13,8 +13,6 @@
 
 using namespace std;
 
-const string path = "/Users/Raph/Documents/Gamagora/IA/Cours5/DetectLanguage/spanish.txt";
-
 int main()
 {
     TrainAnn();
@@ -25,6 +23,7 @@ int main()
 
 void TrainAnn()
 {
+    
     // InputLayer --> nb de lettres (26)
     // OutputLayer --> nb de langues possibles (3 anglais, français, espagnol)
     // HiddenLayer --> 13
@@ -32,7 +31,7 @@ void TrainAnn()
     
     // Création du réseau de neurones
     // nbLayer, InputLayer, HiddenLayer, OutputLayer
-    struct fann* ann = fann_create_standard(3, 26, 13, 3);
+    struct fann* ann = fann_create_standard(3, 26, 13, 4);
 
     
 //    remove("/Users/Raph/Documents/Gamagora/IA/Cours5/DetectLanguage/lang.net");
@@ -55,19 +54,20 @@ void DetectText()
     // Création du réseau de neurones à partir des résultats de l'entrainement précedent (sauvegardé dans lang.net
     struct fann *ann = fann_create_from_file("/Users/Raph/Documents/Gamagora/IA/Cours5/DetectLanguage/lang.net");
     
+    // Séléction du fichier par l'utilisateur
+    ifstream textFile = GetTextFilePath();
+    
     // Calculs des fréquences de chaques lettres pour le texte donné
     float nbLettres[26];
-    CalculateFrequenc(path, nbLettres);
+    CalculateFrequenc(textFile, nbLettres);
     
     // Résultat du réseau de neurones
     float *output = fann_run(ann, nbLettres);
-    cout << endl << endl << "Anglais: " << output[0] << endl << "Français : " << output[1] << std::endl << "Espagnol : " << output[2] << endl;
+    cout << endl << endl << "Anglais : " << output[0] * 100 << "%" << endl << "Français : " << output[1] * 100 << "%" << std::endl << "Espagnol : " << output[2] * 100 << "%" << endl << "Allemand : " << output[3] * 100 << "%" << endl;// << "Portugais : " << output[4] * 100 << "%" << endl;
 }
 
-void CalculateFrequenc(const string& path, float* frequencesLettres)
+void CalculateFrequenc(ifstream& text, float* frequencesLettres)
 {
-    ifstream text(path);
-
     // Nombre d'apparition de chaque lettre
     vector<unsigned int> nbPourChaque(26, 0);
 
@@ -88,8 +88,28 @@ void CalculateFrequenc(const string& path, float* frequencesLettres)
         }
     }
 
-    // On divise le nombre d'apparition d'une lettre par le nombre total pour avoir une frequence enter 0 et 1
+    // On divise le nombre d'apparition d'une lettre par le nombre total pour avoir une frequence entre 0 et 1
     for(unsigned int i = 0; i != 26; i++){
         frequencesLettres[i] = nbPourChaque[i] / (double)nbChar;
+//        cout << (char)(i + 'a') << " : " << frequencesLettres[i] << endl;
     }
+}
+
+ifstream GetTextFilePath()
+{
+        ifstream fileText;
+        string path;
+        
+        do{
+            system("CLEAR");
+            cout << "francais - anglais - espagnol - allemand" << endl << "---------" << endl << endl;
+            cout << "Choisissez la langue que vous voulez ou laissez vide pour français" << endl;
+            getline(cin, path);
+            if ("" == path){
+                path = "francais";
+            }
+            fileText.open("/Users/Raph/Documents/Gamagora/IA/Cours5/DetectLanguage/" + path + ".txt");
+        }while (!fileText);
+        
+        return fileText;
 }
