@@ -14,7 +14,6 @@
 
 using namespace std;
 
-void CalculateFrequenc(const string& path, vector<double>& nbLettres);
+void CalculateFrequenc(const string& path, float* frequencesLettres);
 void TrainAnn();
 void DetectText();
-void generate_frequencies(const string& path, float *frequencies);
