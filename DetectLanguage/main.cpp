@@ -28,11 +28,22 @@ void TrainAnn()
     // InputLayer --> nb de lettres (26)
     // OutputLayer --> nb de langues possibles (3 anglais, français, espagnol)
     // HiddenLayer --> 13
+    
+    
+    // Création du réseau de neurones
+    // nbLayer, InputLayer, HiddenLayer, OutputLayer
     struct fann* ann = fann_create_standard(3, 26, 13, 3);
 
+    
 //    remove("/Users/Raph/Documents/Gamagora/IA/Cours5/DetectLanguage/lang.net");
     
+    // Entrainement du réseau à partir du fichier trainingAFE.data
+    // epochs max : 100000
+    // affiche des infos toutes les 10 epochs
+    // erreur max désiré : 0.0001
     fann_train_on_file(ann, "/Users/Raph/Documents/Gamagora/IA/Cours5/DetectLanguage/trainingAFE.data", 100000, 10, 0.0001);
+    
+    // Sauvegarde du réseau dans le fichier lang.net pour pouvoir s'en servir dans d'autres programmes
     fann_save(ann, "/Users/Raph/Documents/Gamagora/IA/Cours5/DetectLanguage/lang.net");
     fann_destroy(ann);
     
