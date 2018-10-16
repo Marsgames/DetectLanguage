@@ -50,7 +50,7 @@ void DetectText()
     
 //    vector<double> output = fann_run(ann, nbLettres);
     float *output = fann_run(ann, nbLettres);
-    cout << "English: " << output[0] << endl << "French : " << output[1] << std::endl << "Espagnol : " << output[2] << endl;
+    cout << "English: " << output[0] << endl << "French : " << output[1] << std::endl << "Espagnol : " << output[2] << endl; 
 }
 
 void generate_frequencies(const string& path, float* frequencies)
