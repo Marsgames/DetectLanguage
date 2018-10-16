@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		AE1ED3182175EB4000985648 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE1ED3172175EB4000985648 /* main.cpp */; };
 		AE1ED3872175EFEA00985648 /* libfann.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE1ED3632175EE8E00985648 /* libfann.a */; };
-		AE1ED38A2175F33500985648 /* CalculateFrequency.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE1ED3882175F33500985648 /* CalculateFrequency.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -76,8 +75,6 @@
 		AE1ED3632175EE8E00985648 /* libfann.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfann.a; path = ../../../../../Downloads/fann/src/libfann.a; sourceTree = "<group>"; };
 		AE1ED3642175EE8E00985648 /* libfixedfann.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfixedfann.a; path = ../../../../../Downloads/fann/src/libfixedfann.a; sourceTree = "<group>"; };
 		AE1ED3652175EE8E00985648 /* libfixedfann.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfixedfann.2.dylib; path = ../../../../../Downloads/fann/src/libfixedfann.2.dylib; sourceTree = "<group>"; };
-		AE1ED3882175F33500985648 /* CalculateFrequency.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CalculateFrequency.cpp; sourceTree = "<group>"; };
-		AE1ED3892175F33500985648 /* CalculateFrequency.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CalculateFrequency.hpp; sourceTree = "<group>"; };
 		AE1ED38B2175F59900985648 /* main.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = main.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,8 +112,6 @@
 			children = (
 				AE1ED3172175EB4000985648 /* main.cpp */,
 				AE1ED38B2175F59900985648 /* main.hpp */,
-				AE1ED3882175F33500985648 /* CalculateFrequency.cpp */,
-				AE1ED3892175F33500985648 /* CalculateFrequency.hpp */,
 			);
 			path = DetectLanguage;
 			sourceTree = "<group>";
@@ -234,7 +229,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE1ED3182175EB4000985648 /* main.cpp in Sources */,
-				AE1ED38A2175F33500985648 /* CalculateFrequency.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
