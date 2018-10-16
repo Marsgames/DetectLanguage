@@ -41,11 +41,14 @@ void TrainAnn()
 
 void DetectText()
 {
+    // Création du réseau de neurones à partir des résultats de l'entrainement précedent (sauvegardé dans lang.net
     struct fann *ann = fann_create_from_file("/Users/Raph/Documents/Gamagora/IA/Cours5/DetectLanguage/lang.net");
     
+    // Calculs des fréquences de chaques lettres pour le texte donné
     float nbLettres[26];
     CalculateFrequenc(path, nbLettres);
     
+    // Résultat du réseau de neurones
     float *output = fann_run(ann, nbLettres);
     cout << endl << endl << "Anglais: " << output[0] << endl << "Français : " << output[1] << std::endl << "Espagnol : " << output[2] << endl;
 }
