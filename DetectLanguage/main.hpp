@@ -18,3 +18,5 @@ void CalculateFrequenc(ifstream& text, float* frequencesLettres);
 void TrainAnn();
 void DetectText();
 ifstream GetTextFilePath();
+void TrainXor();
+void TryXor();

@@ -18,6 +18,9 @@ int main()
     TrainAnn();
     DetectText();
     
+//    TrainXor();
+//    TryXor();
+    
     return 0;
 }
 
@@ -112,4 +115,31 @@ ifstream GetTextFilePath()
         }while (!fileText);
         
         return fileText;
+}
+
+void TrainXor()
+{
+    // Création du réseau de neurones
+    // nbLayer, InputLayer, HiddenLayer, OutputLayer
+    struct fann* ann = fann_create_standard(3, 2, 3, 1);
+    
+    fann_train_on_file(ann, "/Users/Raph/Documents/Gamagora/IA/Cours5/DetectLanguage/trainingXor.data", 500000, 1000, 0.0001);
+    
+    // Sauvegarde du réseau dans le fichier lang.net pour pouvoir s'en servir dans d'autres programmes
+    fann_save(ann, "/Users/Raph/Documents/Gamagora/IA/Cours5/DetectLanguage/xor.net");
+    fann_destroy(ann);
+    
+}
+
+void TryXor()
+{
+    
+    // Création du réseau de neurones à partir des résultats de l'entrainement précedent (sauvegardé dans lang.net
+    struct fann *ann = fann_create_from_file("/Users/Raph/Documents/Gamagora/IA/Cours5/DetectLanguage/xor.net");
+    
+    float entrees[2] = {-1, -1};
+    
+    // Résultat du réseau de neurones
+    float *output = fann_run(ann, entrees);
+    cout << endl << endl << "result : " << output[0] << endl;
 }
